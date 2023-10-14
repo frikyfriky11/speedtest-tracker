@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=true
+      - LOOP=true
+      - LOOP_DELAY=3600
+      - DB_SAVE=true
+      - DB_HOST=https://your-influx.db
+      - DB_ORG=123yourorgid456
+      - DB_BUCKET=speedtest
+      - DB_TOKEN=123yourapitoken456
+      # - DB_EXTRA_TAGS=source_location=home,source_room=living_room
